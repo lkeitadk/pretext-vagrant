@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "archlinux/archlinux"
+  config.vm.box = "daverosoff/pretext"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -64,8 +64,10 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   # config.vm.provision "shell", inline: <<-SHELL
-  #   apt-get update
-  #   apt-get install -y apache2
+  #   pacman -Syu --noconfirm
+  #   pacman -S --noconfirm base-devel libxslt git python imagemagick ghostscript \
+  #     pdf2svg texlive-core texlive-pictures texlive-latexextra \
+  #     texlive-fontsextra texlive-science texlive-games asymptote sagemath
+  #   git clone https://github.com/rbeezer/mathbook.git && chown vagrant:vagrant mathbook
   # SHELL
-  config.vm.provision :shell, path: "bootstrap.sh"
 end
