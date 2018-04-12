@@ -2,10 +2,10 @@
   "variables": {
     "home":    "{{env `HOME`}}",
     "out_dir": "output-box",
-    "name":    "base-host",
+    "name":    "pretext-webwork",
     "box":     "archlinux",
     "repo":    "archlinux",
-    "version": "2018.01.07"
+    "version": "2018.04.05"
   },
   "builders": [{
     "type": "virtualbox-ovf",
