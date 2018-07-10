@@ -1,0 +1,30 @@
+{
+  "variables": {
+    "home":    "{{env `HOME`}}",
+    "out_dir": "output-box",
+    "name":    "pretext-debug",
+    "box":     "archlinux",
+    "repo":    "archlinux",
+    "version": "2018.07.05"
+  },
+  "builders": [{
+    "type": "virtualbox-ovf",
+    "source_path": "{{user `home`}}/.vagrant.d/boxes/{{user `repo`}}-VAGRANTSLASH-{{user `box`}}/{{user `version`}}/virtualbox/box.ovf",
+    "ssh_username": "vagrant",
+    "ssh_password": "vagrant",
+    "ssh_wait_timeout": "90s",
+    "shutdown_command": "echo 'packer' | sudo -S shutdown -P now"
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "execute_command": "sh '{{ .Path }}'",
+    "inline": [
+      "sudo pacman -S --noconfirm git"
+    ]
+  }],
+  "post-processors": [{
+    "type": "vagrant",
+    "keep_input_artifact": false,
+    "output": "{{user `out_dir`}}/{{user `name`}}-{{user `repo`}}-{{user `box`}}-{{user `version`}}.box"
+  }]
+}
