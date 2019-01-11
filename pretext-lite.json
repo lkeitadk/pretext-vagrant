@@ -19,9 +19,9 @@
     "type": "shell",
     "execute_command": "sh '{{ .Path }}'",
     "inline": [
-      "sudo pacman -Syu --noconfirm",
-      "sudo pacman -S --noconfirm base-devel libxslt git python python-requests imagemagick ghostscript pdf2svg texlive-core texlive-pictures texlive-latexextra texlive-fontsextra",
-      "sudo pacman -S --noconfirm jdk8-openjdk apache-ant",
+      "sudo apt-get installyu --noconfirm",
+      "sudo apt-get install --noconfirm base-devel libxslt git python python-requests imagemagick ghostscript pdf2svg texlive-core texlive-pictures texlive-latexextra texlive-fontsextra",
+      "sudo apt-get install --noconfirm jdk8-openjdk apache-ant",
       "git clone https://github.com/relaxng/jing-trang.git /home/vagrant/jing-trang",
       "/home/vagrant/jing-trang/ant",
       "cp /home/vagrant/jing-trang/lib/xercesImpl.jar /home/vagrant/jing-trang/build",

@@ -19,8 +19,8 @@
     "type": "shell",
     "execute_command": "sh '{{ .Path }}'",
     "inline": [
-      "sudo pacman -Syu --noconfirm",
-      "sudo pacman -S --noconfirm base-devel libxslt git python imagemagick pdf2svg texlive-core texlive-pictures"
+      "sudo apt-get installyu --noconfirm",
+      "sudo apt-get install --noconfirm base-devel libxslt git python imagemagick pdf2svg texlive-core texlive-pictures"
     ]
   }],
   "post-processors": [{
