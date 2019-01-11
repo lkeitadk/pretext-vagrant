@@ -19,7 +19,7 @@
     "type": "shell",
     "execute_command": "sh '{{ .Path }}'",
     "inline": [
-      "sudo pacman -S --noconfirm git"
+      "sudo apt-get install --noconfirm git"
     ]
   }],
   "post-processors": [{

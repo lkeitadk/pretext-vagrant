@@ -19,11 +19,11 @@
     "type": "shell",
     "execute_command": "sh '{{ .Path }}'",
     "inline": [
-      "sudo pacman -Syu --noconfirm",
-      "sudo pacman -S --noconfirm base-devel libxslt git python imagemagick ghostscript pdf2svg texlive-core texlive-pictures texlive-latexextra texlive-fontsextra texlive-science texlive-games asymptote sagemath docker docker-compose",
+      "sudo apt-get installyu --noconfirm",
+      "sudo apt-get install --noconfirm base-devel libxslt git python imagemagick ghostscript pdf2svg texlive-core texlive-pictures texlive-latexextra texlive-fontsextra texlive-science texlive-games asymptote sagemath docker docker-compose",
       "git clone https://github.com/rbeezer/mathbook.git && chown -R vagrant:vagrant mathbook",
       "git clone https://github.com/relaxng/jing-trang.git && chown -R vagrant:vagrant jing-trang",
-      "sudo pacman -S --noconfirm jdk8-openjdk "
+      "sudo apt-get install --noconfirm jdk8-openjdk "
       "mkdir MathJax",
       "mkdir webwork_docker && cd webwork_docker",
       "git clone https://github.com/openwebwork/webwork2.git",
