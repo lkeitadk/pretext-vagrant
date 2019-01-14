@@ -20,7 +20,7 @@
     "execute_command": "sh '{{ .Path }}'",
     "inline": [
       "sudo apt-get installyu --noconfirm",
-      "sudo apt-get install --noconfirm base-devel libxslt git python"
+      "sudo apt-get install --noconfirm build-essential libxslt-dev git python3.6"
     ]
   }],
   "post-processors": [{
