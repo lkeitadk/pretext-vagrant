@@ -19,7 +19,7 @@
     "type": "shell",
     "execute_command": "sh '{{ .Path }}'",
     "inline": [
-      "sudo apt-get install --noconfirm git"
+      "sudo apt-get install --assume -yes git"
     ]
   }],
   "post-processors": [{

@@ -19,8 +19,8 @@
     "type": "shell",
     "execute_command": "sh '{{ .Path }}'",
     "inline": [
-      "sudo apt-get installyu --noconfirm",
-      "sudo apt-get install --noconfirm build-essential libxslt-dev git python3.6"
+      "sudo apt-get install --assume -yes",
+      "sudo apt-get install --assume -yes build-essential libxslt-dev git python3.6"
     ]
   }],
   "post-processors": [{
